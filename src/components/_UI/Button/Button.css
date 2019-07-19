@@ -1,0 +1,25 @@
+.Button {
+  width: 160px;
+  border-radius: 4px;
+  background: white;
+  margin: 0 auto;
+  color: var(--gray);
+  font-size: 14px;
+  height: 40px;
+  font-weight: bold;
+}
+
+.Button_primary {
+  color: var(--primary);
+}
+
+.Button:hover {
+  cursor: pointer;
+}
+
+.Button-link {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

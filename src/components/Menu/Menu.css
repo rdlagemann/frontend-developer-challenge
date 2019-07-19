@@ -1,0 +1,26 @@
+.Menu {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+}
+
+.Menu__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background: white;
+  z-index: 1;
+  list-style: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+.Menu__list_open {
+  opacity: 1;
+  pointer-events: all;
+  transition: all 0.3s;
+}

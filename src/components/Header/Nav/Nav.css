@@ -1,0 +1,19 @@
+.Nav {
+  width: 100%;
+}
+
+.Nav__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.Nav__list_vertical {
+  flex-direction: column;
+}
+
+.Nav__link {
+  margin: 20px;
+}

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hamburguer render 1`] = `
+<button
+  className="Hamburguer"
+>
+  <img
+    alt="Menu"
+    className="Hamburguer__icon"
+    src="menu.svg"
+  />
+</button>
+`;

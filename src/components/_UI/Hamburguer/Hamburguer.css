@@ -1,0 +1,18 @@
+.Hamburguer {
+  border: none;
+  background: transparent;
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  z-index: 2;
+}
+
+.Hamburguer:hover,
+.Hamburguer:focus {
+  outline: none;
+}
+
+.Hamburguer__icon {
+  padding: 15px;
+  width: 50px;
+}
