@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import { create } from 'react-test-renderer'
-import Header from '../Header'
+import Header from '..'
 
 describe('Header', () => {
   xit('renders', () => {

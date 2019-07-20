@@ -1,9 +1,10 @@
 import { combineReducers } from 'redux'
 import { connectRouter } from 'connected-react-router'
 import history from './utils/history'
+import showcaseReducer from './components/Showcase/reducer'
 
 const rootReducer = combineReducers({
-  // home: homeReducer
+  showcase: showcaseReducer,
   router: connectRouter(history)
 })
 

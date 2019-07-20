@@ -21,7 +21,7 @@ export default function Nav({ links, className, vertical }) {
   }
   return (
     <nav className={cx('Nav', className)}>
-      <ul className={cx('Nav__list', { vertical: 'Nav__list_vertical' })}>
+      <ul className={cx('Nav__list', { Nav__list_vertical: vertical })}>
         {links.map((link) => (
           <li className="Nav__link" key={shortid.generate()}>
             <Button className="shadow" tag="a" label={link.label} />

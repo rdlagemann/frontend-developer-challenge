@@ -1,23 +1,3 @@
-html {
-  box-sizing: border-box;
-}
-
-body {
-  line-height: 16px;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
 :root {
   --white: white;
   --dark-gray: #707070;
@@ -31,9 +11,61 @@ body {
   /** breakpoint */
   --md: 426px;
 }
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 16px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: var(--dark-gray);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 /** layout */
 .container-fluid {
   width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media screen and (min-width: 456px) {
+  .container {
+    width: 95%;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .container {
+    width: 75%;
+  }
 }
 
 /** utils */
@@ -46,6 +78,12 @@ body {
 .shadow {
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.16);
 }
+
+.lead {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
 /** display */
 .d-none {
   display: none;
