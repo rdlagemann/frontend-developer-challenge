@@ -1,3 +1,4 @@
+import axios from 'axios'
 import { selectShowcase } from './selectors'
 
 const types = {
@@ -59,10 +60,14 @@ export const receiveError = (error) => ({
 export function loadProducts() {
   return (dispatch, getState) => {
     const { requestUrl } = selectShowcase(getState())
+
     dispatch(fetchData())
-    fetch(requestUrl)
-      .then((res) => res.json())
-      .then((json) => dispatch(receiveData(json)))
-      .catch((err) => dispatch(receiveError(err)))
+
+    axios
+      .get(requestUrl)
+      .then((res) => dispatch(receiveData(res.data)))
+      .catch((err) => {
+        dispatch(receiveError(err))
+      })
   }
 }

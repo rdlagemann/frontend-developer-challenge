@@ -1,0 +1,31 @@
+:root {
+  --white: white;
+  --dark-gray: #707070;
+  --gray: #888;
+  --light-gray: rgba(0, 0, 0, 0.16);
+  --purple: #492d5b;
+  --orange: #f8463f;
+  --primary: var(--purple);
+  --secondary: var(--orange);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 16px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: var(--dark-gray);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}

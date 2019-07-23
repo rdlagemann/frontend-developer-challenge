@@ -1,0 +1,23 @@
+.bg-orange-gradient {
+  background: #f8463f;
+  background: -webkit-linear-gradient(to left, #f5af19, #f8463f);
+  background: linear-gradient(to left, #f5af19, #f8463f);
+}
+
+.shadow {
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.16);
+}
+
+.lead {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.centralized {
+  display: flex;
+  justify-content: center;
+}
+
+.w-100 {
+  width: 100%;
+}

@@ -15,6 +15,7 @@ Section.defaultProps = {
 
 export default function Section({
   title,
+  subtitle,
   className,
   children,
   useDefaultClassNames,
@@ -32,6 +33,7 @@ export default function Section({
           {title}
         </h2>
       )}
+      {!!subtitle && <p className="Section__subtitle"> {subtitle}</p>}
       {children}
     </section>
   )

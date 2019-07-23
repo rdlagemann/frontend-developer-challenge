@@ -5,6 +5,7 @@ import Empty from './Empty'
 import ContentLoader from './ContentLoader'
 import ProductCard from '../_UI/ProductCard'
 import shortid from 'shortid'
+import Button from '../_UI/Button'
 
 Showcase.propTypes = {
   products: PropTypes.array,
@@ -23,7 +24,8 @@ export default function Showcase({
   products,
   emptyMessage,
   isFetching,
-  loadProducts
+  loadProducts,
+  error
 }) {
   useEffect(() => {
     loadProducts()
@@ -31,15 +33,29 @@ export default function Showcase({
 
   return (
     <div className="Showcase">
-      {!products.length && !isFetching && <Empty message={emptyMessage} />}
-      {!!products.length &&
-        products.map((product) => (
-          <ProductCard key={shortid.generate()} product={product} />
-        ))}
-      {isFetching && <ContentLoader />}
-      <button data-test="load-more-button" onClick={loadProducts}>
-        Ainda mais produtos aqui!
-      </button>
+      <div className="Showcase__body">
+        {error && error.message}
+        {!products.length && !isFetching && <Empty message={emptyMessage} />}
+        {!!products.length &&
+          products.map((product) => (
+            <div className="Showcase__item" key={product.id}>
+              <ProductCard product={product} />
+            </div>
+          ))}
+        {isFetching && <ContentLoader />}
+      </div>
+      <br />
+      <div className="centralized">
+        <Button
+          style={{ width: 260 }}
+          color="secondary"
+          disabled={isFetching}
+          data-test="load-more-button"
+          onClick={loadProducts}
+        >
+          Ainda mais produtos aqui!
+        </Button>
+      </div>
     </div>
   )
 }

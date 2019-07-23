@@ -53,13 +53,4 @@ describe('Showcase functions', () => {
     mount(<ShowcaseWithProvider loadProducts={mockLoadProducts} />)
     expect(mockLoadProducts).toHaveBeenCalledTimes(1)
   })
-
-  it('should have a "Load More" on button click', () => {
-    const mockLoadProducts = jest.fn()
-    const showcase = mount(
-      <ShowcaseWithProvider loadProducts={mockLoadProducts} />
-    )
-    showcase.find('[data-test="load-more-button"]').simulate('click')
-    expect(mockLoadProducts).toHaveBeenCalledTimes(2)
-  })
 })

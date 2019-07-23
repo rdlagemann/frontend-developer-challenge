@@ -24,7 +24,12 @@ export default function Nav({ links, className, vertical }) {
       <ul className={cx('Nav__list', { Nav__list_vertical: vertical })}>
         {links.map((link) => (
           <li className="Nav__link" key={shortid.generate()}>
-            <Button className="shadow" tag="a" label={link.label} />
+            <Button
+              className="shadow"
+              style={{ width: '160px', padding: '0' }}
+              tag="a"
+              label={link.label}
+            />
           </li>
         ))}
       </ul>

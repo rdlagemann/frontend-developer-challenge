@@ -1,0 +1,57 @@
+/** layout */
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media screen and (min-width: 769px) {
+  .container {
+    width: 95%;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .container {
+    width: 75%;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .container {
+    width: 55%;
+  }
+}
+
+/** display */
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-block {
+  display: flex;
+}
+
+@media screen and (min-width: 426px) {
+  .d-md-block {
+    display: block !important;
+  }
+
+  .d-md-none {
+    display: none !important;
+  }
+}
