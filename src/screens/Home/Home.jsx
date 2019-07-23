@@ -2,6 +2,8 @@ import React from 'react'
 import Header from '../../components/Header/Header'
 import Section from '../../components/_UI/Section/Section'
 import Showcase from '../../components/Showcase'
+import NewsLetter from '../../components/NewsLetter/NewsLetter'
+import Layout from '../../components/Layout/Layout'
 
 export default function Home() {
   const navLinks = [
@@ -12,7 +14,7 @@ export default function Home() {
   ]
 
   return (
-    <div>
+    <Layout>
       <Header
         className="bg-orange-gradient"
         navLinks={navLinks}
@@ -24,6 +26,12 @@ export default function Home() {
       <Section title="Sua seleção especial">
         <Showcase />
       </Section>
-    </div>
+      <Section
+        title="Compartilhe a novidade"
+        subtitle="Quer que seus amigos também ganhem a lista personalizada deles? Preencha agora!"
+      >
+        <NewsLetter />
+      </Section>
+    </Layout>
   )
 }
