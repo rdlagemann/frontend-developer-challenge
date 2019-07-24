@@ -15,7 +15,7 @@ const ShowcaseWithProvider = (props) => (
 )
 
 describe('Showcase Empty', () => {
-  it('should render an empty message', () => {
+  it('should render an empty message', async () => {
     const emptyMessage = 'Nenhum produto disponível'
     const wrapper = mount(<ShowcaseWithProvider emptyMessage={emptyMessage} />)
     expect(wrapper.contains(emptyMessage)).toBe(true)
@@ -31,14 +31,14 @@ describe('Showcase Empty', () => {
 })
 
 describe('Showcase fetching', () => {
-  it('should render content loader', () => {
+  it('should render content loader', async () => {
     const renderer = create(<ShowcaseWithProvider isFetching={true} />)
     expect(typeof renderer.root.findByType(ContentLoader)).toBe('object')
   })
 })
 
 describe('Showcase products', () => {
-  it('should render products cards', () => {
+  it('should render products cards', async () => {
     const products = [...productsMock]
     const renderer = create(<ShowcaseWithProvider products={products} />)
     expect(renderer.root.findAllByType(ProductCard).length).toBe(

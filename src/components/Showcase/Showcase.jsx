@@ -4,7 +4,6 @@ import './Showcase.css'
 import Empty from './Empty'
 import ContentLoader from './ContentLoader'
 import ProductCard from '../_UI/ProductCard'
-import shortid from 'shortid'
 import Button from '../_UI/Button'
 
 Showcase.propTypes = {

@@ -17,11 +17,13 @@ describe('Home', () => {
     const homeRenderer = create(<HomeWithProvider />)
     const homeInstance = homeRenderer.root
     expect(typeof homeInstance.findByType(Header)).toBe('object')
+    homeRenderer.unmount()
   })
 
   it('should have a product showcase', () => {
     const homeRenderer = create(<HomeWithProvider />)
     const homeInstance = homeRenderer.root
     expect(typeof homeInstance.findByType(Showcase)).toBe('object')
+    homeRenderer.unmount()
   })
 })
