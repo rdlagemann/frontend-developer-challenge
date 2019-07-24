@@ -4,7 +4,7 @@ import { create } from 'react-test-renderer'
 import Header from '..'
 
 describe('Header', () => {
-  xit('renders', () => {
+  it('renders', () => {
     const output = create(<Header />)
     expect(output).toMatchSnapshot()
   })

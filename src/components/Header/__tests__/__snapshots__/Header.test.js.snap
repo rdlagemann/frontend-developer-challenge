@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders 1`] = `
+<header
+  className="Header"
+>
+  <div
+    className="container"
+  >
+    <button
+      className="Hamburguer d-block d-md-none"
+      onClick={[Function]}
+    >
+      <img
+        alt="Menu"
+        className="Hamburguer__icon"
+        src="menu.svg"
+      />
+    </button>
+    <div
+      className="Menu d-flex d-md-none"
+    >
+      <span
+        className="Menu__list"
+      />
+    </div>
+  </div>
+</header>
+`;

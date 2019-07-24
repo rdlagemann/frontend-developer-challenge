@@ -1,8 +1,8 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import { create } from 'react-test-renderer'
-import Nav from './'
-import Button from '../../_UI/Button'
+import Nav from '..'
+import Button from '../../../_UI/Button'
 
 describe('Nav', () => {
   it('should not render', () => {

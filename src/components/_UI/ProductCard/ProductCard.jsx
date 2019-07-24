@@ -1,8 +1,22 @@
 import React, { useEffect, useState } from 'react'
+import PropTypes from 'prop-types'
 import cx from 'classnames'
 import brl from '../../../utils/brlCurrency'
 import './ProductCard.css'
 import Button from '../Button'
+
+ProductCard.propTypes = {
+  product: PropTypes.shape({
+    name: PropTypes.string,
+    description: PropTypes.string,
+    oldPrice: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    price: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    installments: PropTypes.shape({
+      count: PropTypes.number,
+      value: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+    })
+  }).isRequired
+}
 
 export default function ProductCard({ product }) {
   const [onLoadCssClass, setOnLoadCssClass] = useState('ProductCard_loaded')
@@ -11,7 +25,6 @@ export default function ProductCard({ product }) {
       setOnLoadCssClass('')
     }, 1000)
     return () => {
-      console.log('unmoun')
       clearTimeout(timer)
     }
   }, [])
